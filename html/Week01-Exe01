@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Ntirintis</title>
+</head>
+<link rel="stylesheet" href="../css/Week01-Exe01-Style.css">
+<body>
+    <div><h1>your name</h1></div>
+    <div><img src="photo.jpg" alt="photo" id="photo"></div>
+    <div><h2>Favorite Music Artists</h2>
+    <ul>
+        <li>NF</li>
+        <li>Slipknow</li>
+        <li>Joyner</li>
+        <li>Weeknd</li>
+        <li>ACDC</li>
+    </ul>
+    </div>
+    <div><h2>Favorite Films</h2>
+        <ol>
+            <li>Interstellar</li>
+            <li>Inception</li>
+            <li>Cloud Atlas</li>
+            <li>Dune</li>
+            <li>Tenet</li>    
+        </ol>
+    </div>
+    <div><a href="https://www.meta.com/">My Profile</a></div>
+</body>
+</html>
+
