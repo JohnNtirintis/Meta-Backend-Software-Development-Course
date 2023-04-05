@@ -13,6 +13,11 @@ number = [1,2,3,4,5,6,7,8,9,10,11,12]
 numdict = {x:x**2 for x in number}
 print("Using one input list ot create dict: ", numdict)
 
+# Create a dict where the first letter of the month
+# is the key for the month (value)
+first_digit_months_dict = {x[0]:x for x in months}
+print("First letter of month is the key for the month: " , first_digit_months_dict)
+
 # Using two input lists
 # The zip() function takes iterables (can be zero or more),
 # aggregates them in a tuple, and returns it.
