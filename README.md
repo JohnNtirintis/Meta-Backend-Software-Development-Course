@@ -21,7 +21,6 @@
 <br>
 
 <h2>Certificates of Completion:</h2>
-<a href="https://www.coursera.org/account/accomplishments/certificate/68E4Z5USSFWH">Introduction to Back-End Development Certificate of Completion</a> 
-<br>
-<a href="https://www.coursera.org/account/accomplishments/certificate/A84HZG2KRBPR">Programming in Python Certificate of Completion</a>
+<a href="https://www.coursera.org/account/accomplishments/certificate/68E4Z5USSFWH">Introduction to Back-End Development Certificate of Completion</a> <br>
+<a href="https://www.coursera.org/account/accomplishments/certificate/A84HZG2KRBPR">Programming in Python Certificate of Completion</a> <br>
 <a href="https://www.coursera.org/account/accomplishments/certificate/6WKCK7RZD8C6">Version Control</a>
