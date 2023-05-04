@@ -4,9 +4,9 @@
 </p>
 
 <ol>
-  <li>Introduction to Back-End Development</li>
-  <li>Programming in Python</li>
-  <li>Version Control</li>
+  <li>Introduction to Back-End Development &#x2713;</li>
+  <li>Programming in Python &#x2713;</li>
+  <li>Version Control &#x2713; </li>
   <li>Introduction to Databases for Back-End Development</li>
   <li>Django Web Framework</li>
   <li>APIs</li>
