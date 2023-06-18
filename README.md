@@ -7,8 +7,8 @@
   <li>Introduction to Back-End Development &#x2713;</li>
   <li>Programming in Python &#x2713;</li>
   <li>Version Control &#x2713; </li>
-  <li>Introduction to Databases for Back-End Development</li>
-  <li>Django Web Framework</li>
+  <li>Introduction to Databases for Back-End Development</li> &#x2713;
+  <li>Django Web Framework</li> (In Progress)
   <li>APIs</li>
   <li>The Full Stack</li>
   <li>Back-End Developer Capstone</li>
@@ -24,3 +24,5 @@
 <a href="https://www.coursera.org/account/accomplishments/certificate/68E4Z5USSFWH">Introduction to Back-End Development Certificate of Completion</a> <br>
 <a href="https://www.coursera.org/account/accomplishments/certificate/A84HZG2KRBPR">Programming in Python Certificate of Completion</a> <br>
 <a href="https://www.coursera.org/account/accomplishments/certificate/6WKCK7RZD8C6">Version Control</a>
+<a href="https://www.coursera.org/account/accomplishments/certificate/6WKCK7RZD8C6">Introduction to Databases for Back-End Development</a>
+
