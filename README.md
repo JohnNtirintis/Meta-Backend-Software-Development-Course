@@ -1,7 +1,8 @@
-<h1> Meta Backend Software Development Course </h1>
+# Backend Software Development Course - META
 
-<p>Meta Backend Software Development Course is a professional certificate course offered by Meta on Coursera. It consists of 9 courses, the courses are:
-</p>
+This repository contains all of my personal project files and notes from the Backend Software Development Course, a Professional Certificate program offered by Meta
+
+## Courses
 
 <ol>
   <li>Introduction to Back-End Development &#x2713;</li>
