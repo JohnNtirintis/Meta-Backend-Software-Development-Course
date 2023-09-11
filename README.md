@@ -10,8 +10,8 @@ This repository contains all of my personal project files and notes from the Bac
   <li><a href="https://www.coursera.org/account/accomplishments/certificate/6WKCK7RZD8C6">Version Control</a> &#x2713; </li>
   <li><a href="https://www.coursera.org/account/accomplishments/certificate/62W8M93UJJM8">Introduction to Databases for Back-End Development</a> &#x2713; </li> 
   <li><a href="https://www.coursera.org/account/accomplishments/certificate/5G3T52CS9423">Django Web Framework</a> &#x2713;</li> 
-  <li>APIs (In Progress)</li>
-  <li>The Full Stack</li>
+  <li><a href="https://www.coursera.org/account/accomplishments/certificate/KZBSFXM4K2XW">APIs</a>  &#x2713;</li>
+  <li>The Full Stack (In Progress) </li>
   <li>Back-End Developer Capstone</li>
   <li>Coding Interview Preparation</li>
 </ol>
