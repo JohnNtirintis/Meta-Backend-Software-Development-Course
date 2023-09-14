@@ -1,0 +1,127 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section>
+  <article>
+    <h1>Make a reservation</h1>
+    <div class="row">
+      <div class="column">
+        <form method="POST" id="form">
+          {% csrf_token %}
+          <p>
+            <label for="first_name">Name:</label>
+            <input type="text" placeholder="Your Name" required id="first_name" />
+          </p>
+          <p>
+            <label for="reservation_date">Reservation Date:</label>
+            <input type="Date" required id="reservation_date" />
+          </p>
+          <p>
+            <label for="reservation_table">Reservation time:</label>
+            <select id="reservation_table">
+              <option value="0" disabled>Select time</option>
+            </select>
+          </p>
+          <button type="button" id="button">Reserve</button>
+        </form>
+      </div>
+      <div class="column">
+        <h2>Bookings For <span id="today"></span></h2>
+        <div id="bookings"></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize date to today
+    const today = new Date();
+    const formattedToday = today.toISOString().split("T")[0];
+    document.getElementById("reservation_date").value = formattedToday;
+  
+    // Initial fetching of bookings
+    getBookings();
+  
+    document.getElementById("button").addEventListener("click", handleBooking);
+    document.getElementById("reservation_date").addEventListener("change", getBookings);
+  });
+  
+  async function getBookings() {
+    const date = document.getElementById("reservation_date").value;
+    document.getElementById("today").innerText = date;
+  
+    const response = await fetch(`{% url 'bookings_get' %}?date=${date}`);
+    
+    console.log("Raw Response: ", response);
+
+    const data = await response.json();
+
+    // Debugging
+    console.log("Parsed Data: ", data);
+  
+    let bookings = "";
+    let reservationTable = [];
+    if(Array.isArray(data.data)){
+      for(const item of data.data) {
+        console.log('Item', item);
+        reservationTable.push(item.reservation_slot);
+        bookings += `<p>${item.first_name} - ${formatTime(item.reservation_slot)}</p>`;
+      }
+    } else {
+      console.warn("Data is not an array");
+    }
+  
+    updateReservationOptions(reservationTable);
+  
+    document.getElementById("bookings").innerHTML = bookings || "No bookings";
+  }
+  
+  function updateReservationOptions(reservationTable) {
+    let tableOptions = '<option value="0" disabled>Select time</option>';
+    
+    for (let i = 11; i < 20; i++) {
+      const label = `${i}:00`;
+      if (reservationTable.includes(i)) {
+        tableOptions += `<option value=${i} disabled>${label}</option>`;
+      } else {
+        tableOptions += `<option value=${i}>${label}</option>`;
+      }
+    }
+    document.getElementById("reservation_table").innerHTML = tableOptions;
+  }
+  
+  async function handleBooking() {
+    const formData = {
+      first_name: document.getElementById("first_name").value,
+      reservation_date: document.getElementById("reservation_date").value,
+      // reservation_table: document.getElementById("reservation_table").value,
+      reservation_slot: document.getElementById("reservation_table").value,
+    };
+  
+    // const currentTable = parseInt(formData.reservation_table, 10);
+    const currentTable = parseInt(formData.reservation_slot, 10);
+    
+    const dropdown = document.getElementById("reservation_table");
+    if (dropdown.options[dropdown.selectedIndex].disabled) {
+      alert("Time slot is already booked for this day!");
+      return;
+    }
+  
+    const response = await fetch("{% url 'bookings_post' %}", {
+      method: "post",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+  
+    if (response.ok) {
+      getBookings();
+    }
+  }
+  
+  function formatTime(time) {
+    return `${time}:00`;
+  }
+</script>
+{% endblock %}
